@@ -1,0 +1,39 @@
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgb(255,255,255);
+    backdrop-filter: blur(4px);
+    top: 0%;
+  }
+ svg {
+    width: 330px;
+    margin: 0px auto;
+    position: absolute;
+  }
+ path {
+    stroke-width: 1.4px;
+    stroke-dasharray: 600px;
+    stroke-dashoffset: 600px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: transparent;
+    stroke: #000000;
+    animation: animate 2.9s ease-in forwards;
+  }
+  @keyframes animate {
+    75% {
+      fill: transparent;
+    }
+    100% {
+      fill: black;
+      stroke-dashoffset: 0px;
+    }
+  }
+
